@@ -1,38 +1,157 @@
-.App {
+/* App.css */
+
+body {
+  background-color: rgb(15, 18, 26);
+  color: rgb(118, 173, 177);
+  margin: 0;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 20px;
+}
+
+.button-container {
+  top: 10px;
+  right: 20px;
+}
+
+.tab-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #3f6694;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.clicked {
+  background-color: #303e68;
+  color: rgb(165, 165, 165);
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+/* Full-width table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  color: rgb(118, 173, 177);
+  table-layout: fixed; /* Force columns to have equal width */
+}
+
+/* Equal-width columns */
+th,
+td {
+  padding: 10px;
   text-align: center;
+  width: 25%; /* Ensure equal width for each of the 4 columns */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+th {
+  background-color: #1e3b54;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+td {
+  background-color: #182931;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+table tbody tr {
+  opacity: 0.5;
+}
+
+table tbody tr:hover {
+  opacity: 1;
+}
+
+/* Additional styling to ensure content fits */
+td,
+th {
+  word-wrap: break-word; /* Ensure text doesn't overflow */
+}
+
+/* Pie chart container styling */
+.pieChartContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  margin: 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.pieChartContainer div {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Add or update these styles */
+.table-container {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  vertical-align: top;
+}
+
+/* Make sure cells don't wrap and show ellipsis for overflow */
+td,
+th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.lists-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.table-container {
+  flex: 0 0 400px;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Make all columns equal width within their tables */
+th,
+td {
+  width: 33.333%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
+  text-align: left;
+}
+
+/* Optional: Hide scrollbar but keep functionality */
+.lists-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.lists-container::-webkit-scrollbar {
+  display: none;
 }
